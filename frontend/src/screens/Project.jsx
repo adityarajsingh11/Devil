@@ -396,6 +396,7 @@ import { initializeSocket, receiveMessage, sendMessage } from "../config/socket"
 import { UserContext } from "../context/user.context";
 import Markdown from "markdown-to-jsx";
 import hljs from "highlight.js";
+import { getWebContainer } from "../config/webContainer";
 
 function SyntaxHighlightedCode(props) {
   const ref = useRef(null);
@@ -409,6 +410,8 @@ function SyntaxHighlightedCode(props) {
 
   return <code {...props} ref={ref} />;
 }
+
+
 
 function Project() {
   const location = useLocation();
@@ -424,6 +427,8 @@ function Project() {
   const [fileTree, setFileTree] = useState({});
   const [currentFile, setCurrentFile] = useState(null);
   const [openFiles, setOpenFiles] = useState([]);
+
+  const [webContainer , setWebContainer] = useState(null);
 
   // ✅ Select collaborator toggle
   const handleUserClick = (id) => {
@@ -484,11 +489,22 @@ function Project() {
   useEffect(() => {
     initializeSocket(project._id);
 
+    if(!webContainer){
+        getWebContainer().then(container => {
+            setWebContainer(container)
+            console.log("container started")
+        })
+    }
+
     receiveMessage("project-message", (data) => {
       console.log("📩 Received:", data);
 
       try {
         const message = JSON.parse(data.message);
+        console.log(message);
+
+        webContainer?.mount(message.fileTree)
+
         if (message.fileTree) {
           setFileTree(message.fileTree);
         }
