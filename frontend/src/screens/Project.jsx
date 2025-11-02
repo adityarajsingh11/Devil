@@ -429,6 +429,7 @@ function Project() {
   const [openFiles, setOpenFiles] = useState([]);
 
   const [webContainer , setWebContainer] = useState(null);
+  const [ iframeUrl, setIframeUrl ] = useState(null)
 
   // ✅ Select collaborator toggle
   const handleUserClick = (id) => {
@@ -691,6 +692,11 @@ function Project() {
                               }
                           }))
 
+                          webContainer.on('server-ready',(port, url) =>{
+                            console.log(port, url)
+                            setIframeUrl(url)
+                          })
+
                       }}
                       className='p-2 px-4 bg-slate-300 text-white'
                   >
@@ -735,6 +741,11 @@ function Project() {
               )}
             </div>
           </div>
+
+            {iframeUrl && webContainer &&
+              <iframe src={iframeUrl} className="w-1/2 h-full"></iframe>
+            }
+
       
       </section>
 
