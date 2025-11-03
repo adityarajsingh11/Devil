@@ -11,21 +11,38 @@ const Login = () => {
   const { setUser } = useContext(UserContext)
   const navigate = useNavigate()
 
+  // async function submitHandler(e) {
+  //   e.preventDefault()
+  //   setLoading(true)
+  //   try {
+  //     const res = await axios.post('/users/login', { email, password })
+  //     localStorage.setItem('token', res.data.token)
+  //     setUser(res.data.user)
+  //     navigate('/')
+  //   } catch (err) {
+  //     console.error(err.response?.data || err.message)
+  //     alert(err.response?.data?.message || 'Invalid credentials')
+  //   } finally {
+  //     setLoading(false)
+  //   }
+  // }
+
   async function submitHandler(e) {
-    e.preventDefault()
-    setLoading(true)
-    try {
-      const res = await axios.post('/users/login', { email, password })
-      localStorage.setItem('token', res.data.token)
-      setUser(res.data.user)
-      navigate('/')
-    } catch (err) {
-      console.error(err.response?.data || err.message)
-      alert(err.response?.data?.message || 'Invalid credentials')
-    } finally {
-      setLoading(false)
-    }
+  e.preventDefault()
+  setLoading(true)
+  try {
+    const res = await axios.post('/users/login', { email, password })
+    localStorage.setItem('token', res.data.token)
+    setUser(res.data.user)
+    navigate('/home') // ✅ FIXED: Go to Home instead of Overview
+  } catch (err) {
+    console.error(err.response?.data || err.message)
+    alert(err.response?.data?.message || 'Invalid credentials')
+  } finally {
+    setLoading(false)
   }
+}
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-950 to-black text-slate-100 px-4">
