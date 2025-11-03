@@ -166,8 +166,37 @@ const Project = () => {
                 : 'bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-100 rounded-tl-none'
 
               return (
-                <div key={i} className={`flex flex-col ${alignment}`}>
-                  {/* Sender (email small label) */}
+                // <div key={i} className={`flex flex-col ${alignment}`}>
+                //   {/* Sender (email small label) */}
+                //   <small
+                //     className={`text-xs mb-1 ${
+                //       isAI
+                //         ? 'text-center text-green-400'
+                //         : isSelf
+                //         ? 'text-right text-blue-400'
+                //         : 'text-slate-500 dark:text-slate-400'
+                //     }`}
+                //   >
+                //     {isAI ? '🤖 AI Assistant' : msg.sender.email}
+                //   </small>
+
+                //   {/* Message bubble */}
+                //   <div
+                //     className={`relative px-4 py-2 rounded-2xl shadow-sm text-sm leading-relaxed whitespace-pre-wrap max-w-[75%] transition-all ${bubbleClass}`}
+                //   >
+                //     {isAI ? (
+                //       WriteAiMessage(msg.message)
+                //     ) : (
+                //       <p className='break-words'>{msg.message}</p>
+                //     )}
+                //   </div>
+                // </div>
+
+                <div
+                  key={i}
+                  className={`flex flex-col ${alignment} max-w-full`}
+                >
+                  {/* Sender label */}
                   <small
                     className={`text-xs mb-1 ${
                       isAI
@@ -182,15 +211,22 @@ const Project = () => {
 
                   {/* Message bubble */}
                   <div
-                    className={`relative px-4 py-2 rounded-2xl shadow-sm text-sm leading-relaxed whitespace-pre-wrap max-w-[75%] transition-all ${bubbleClass}`}
+                    className={`relative px-4 py-2 rounded-2xl shadow-sm text-sm leading-relaxed break-words whitespace-pre-wrap transition-all ${bubbleClass}`}
+                    style={{
+                      maxWidth: '500px', // ✅ hard width cap
+                      wordBreak: 'break-word',
+                      overflowWrap: 'break-word',
+                      whiteSpace: 'pre-wrap',
+                    }}
                   >
                     {isAI ? (
                       WriteAiMessage(msg.message)
                     ) : (
-                      <p className='break-words'>{msg.message}</p>
+                      <p className="break-words">{msg.message}</p>
                     )}
                   </div>
                 </div>
+
               )
             })}
           </div>
