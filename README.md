@@ -137,7 +137,7 @@ cd backend
 npm install
 ```
 
-###📄 Step 3: Configure Environment Variables
+### 📄 Step 3: Configure Environment Variables
 ```bash
 
 Create a .env file inside backend and add:
@@ -147,6 +147,22 @@ MONGO_URI=your_mongo_connection_string
 JWT_SECRET=your_jwt_secret
 GOOGLE_API_KEY=your_google_api_key
 
+```
+
+### ▶️ Step 4: Start Backend Server
+```
+node server.js
+```
+
+### 💻 Step 5: Frontend Setup
+```
+cd frontend
+npm install
+```
+
+### 🚀 Step 6: Run Frontend
+```
+npm run dev
 ```
 
 
