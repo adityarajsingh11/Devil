@@ -32,16 +32,15 @@
 🚀 **Fast & Scalable Architecture**  
 ⚙️ Optimized full-stack structure using **Node.js**, **Express**, and **MongoDB**
 
----
 
-> 💡 *SocketVerse isn’t just a chat app — it’s a real-time developer workspace that connects ideas, code, and people.* ⚡
+
+ 💡 *SocketVerse isn’t just a chat app — it’s a real-time developer workspace that connects ideas, code, and people.* ⚡
 
 ---
 
 ## 🏗️ Project Overview
 
 **SocketVerse** is divided into two main folders:
-
 
 Each part runs independently but communicates in real-time through the WebSocket connection.
 
@@ -126,15 +125,15 @@ Before you begin, ensure your development environment meets the following requir
 | ⚙️ **Git** | Latest | For cloning and version control |
 | 🔄 *(Optional)* **Redis** | — | For caching and socket optimization |
 
-> 💡 **Tip:** You can verify installations by running:  
-> ```bash
-> node -v
-> npm -v
-> git --version
-> mongod --version
-> ```
+💡 **Tip:** You can verify installations by running:  
+ ```bash
+ node -v
+ npm -v
+ git --version
+ mongod --version
+ ```
 
----
+
 
 ---
 ## 🚀 Usage Guide
@@ -150,8 +149,6 @@ Before you begin, ensure your development environment meets the following requir
 ## ⚙️ Installation & Setup
 
 Follow these steps carefully to set up and run **SocketVerse** locally 👇  
-
----
 
 ### 🪄 Step 1: Clone the Repository
 ```bash
@@ -202,9 +199,11 @@ Frontend → http://localhost:5173
 
 Backend → http://localhost:5000
 ```
-
+---
 ## 🪪 License
 This project is licensed under the **MIT License** — feel free to use and modify.
+
+---
 
 ## 💬 Contact
 
