@@ -8,13 +8,33 @@
 
 ## 🌟 Key Features
 
-✅ **Real-Time Communication** — Instant developer-to-developer chat using Socket.IO  
-✅ **Live Code Collaboration** — Share, edit, and preview code in real-time  
-✅ **AI-Powered Assistant** — Integrated AI suggestions via Google Generative AI  
-✅ **Secure Authentication** — JWT-based login and registration system  
-✅ **Team Management** — Collaborate seamlessly on shared projects  
-✅ **WebContainer Integration** — Build and deploy projects instantly in-browser  
-✅ **Modern UI/UX** — Built with React 19, TailwindCSS 4, and Framer Motion for smooth animations  
+✨ **Real-Time Communication**  
+💬 Instant developer-to-developer chat powered by **Socket.IO**
+
+🧑‍💻 **Live Code Collaboration**  
+🪄 Share, edit, and preview code with teammates in real time
+
+🤖 **AI-Powered Assistant**  
+🧠 Integrated **Google Generative AI** for smart suggestions & debugging help
+
+🔐 **Secure Authentication**  
+🔑 JWT-based login, registration, and token protection system
+
+👥 **Team Management**  
+🤝 Invite, collaborate, and manage team members effortlessly
+
+⚡ **WebContainer Integration**  
+🌐 Build & deploy your projects instantly — right in the browser
+
+🎨 **Modern UI/UX**  
+💫 Built with **React 19**, **TailwindCSS 4**, and **Framer Motion** for beautiful animations
+
+🚀 **Fast & Scalable Architecture**  
+⚙️ Optimized full-stack structure using **Node.js**, **Express**, and **MongoDB**
+
+---
+
+> 💡 *SocketVerse isn’t just a chat app — it’s a real-time developer workspace that connects ideas, code, and people.* ⚡
 
 ---
 
@@ -164,5 +184,11 @@ npm install
 ```
 npm run dev
 ```
+### 🌐 Step 7: Access the App
+```
 
+Frontend → http://localhost:5173
+
+Backend → http://localhost:5000
+```
 
