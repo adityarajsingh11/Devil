@@ -129,5 +129,24 @@ git clone https://github.com/yourusername/SocketVerse.git
 
 # Navigate into the project
 cd SocketVerse
+```
+
+### ⚙️ Step 2: Backend Setup
+```bash
+cd backend
+npm install
+```
+
+###📄 Step 3: Configure Environment Variables
+```bash
+
+Create a .env file inside backend and add:
+
+PORT=5000
+MONGO_URI=your_mongo_connection_string
+JWT_SECRET=your_jwt_secret
+GOOGLE_API_KEY=your_google_api_key
+
+```
 
 
